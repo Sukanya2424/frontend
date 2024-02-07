@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { CareerlevelKnowledgeService } from '../../service-crud/careerlevel-knowledge.service';
+import { CareerLevelService } from '../../service-crud/career-level.service';
+import { KnowledgeService } from '../../service-crud/knowledge.service';
 
 @Component({
   selector: 'app-careerlevel-knowledge',
@@ -16,7 +18,11 @@ export class CareerlevelKnowledgeComponent {
   
   knowlegesOptions: any[] = [];
 
-  constructor(private clknowlegeService: CareerlevelKnowledgeService) {}
+  constructor(
+    private clknowlegeService: CareerlevelKnowledgeService,
+    private careerLevelsService: CareerLevelService,
+    private knowlegeService: KnowledgeService
+    ) {}
 
   ngOnInit() {
     this.loadData();
@@ -36,14 +42,14 @@ export class CareerlevelKnowledgeComponent {
   }
 
   getCareerLevelOptions() {
-    this.clknowlegeService.getCareerLevel().subscribe((data: any) => {
+    this.careerLevelsService.getCareerLevel().subscribe((data: any) => {
       this.careerlevelOptions = data.data
     }
     );
   }
 
   getKnowlegesOptions() {
-    this.clknowlegeService.getKnowleges().subscribe((data: any) => { 
+    this.knowlegeService.getKnowleges().subscribe((data: any) => { 
       this.knowlegesOptions = data.data
     }
     );

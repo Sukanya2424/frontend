@@ -29,11 +29,5 @@ export class CareerlevelKnowledgeService {
 
 
 
-  getCareerLevel(): Observable<any>{
-    return this.http.get(`${this.apiUrl}/getCareerLevel`);
-  }
 
-  getKnowleges(): Observable<any>{
-    return this.http.get(`${this.apiUrl}/getKnowlege`);
-  }
 }

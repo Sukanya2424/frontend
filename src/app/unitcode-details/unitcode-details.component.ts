@@ -2,10 +2,6 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { CareerService } from '../service/career.service';
 import { ActivatedRoute } from '@angular/router';
 import { ProfileService } from '../service/profile.service';
-import { Observable, catchError, map, of } from 'rxjs';
-import { HttpClient, HttpResponse } from '@angular/common/http';
-import { NgForm } from '@angular/forms';
-
 import { ChangeDetectorRef } from '@angular/core';
 
 
@@ -16,9 +12,6 @@ interface EocItem {
   pc_system: string;
 }
 
-
-
-
 @Component({
   selector: 'app-unitcode-details',
   templateUrl: './unitcode-details.component.html',
@@ -27,43 +20,30 @@ interface EocItem {
 export class UnitcodeDetailsComponent implements OnInit{
 
 
-  unitcode: any; // Define a property to store career level details
+  unitcode: any; 
   unitcodeId!: number;
 
-  // Additional properties for handling the form
+
   selectedSkillIndex: number | null = null;
-  selectedSkill: any; // You may want to create a model for better type-checking
+  selectedSkill: any; 
 
   selectedKnowledgeIndex: number | null = null;
-  selectedKnowledge: any; // You may want to create a model for better type-checking
+  selectedKnowledge: any; 
 
-
- 
 
   profileSkillData: { link_skill: string } = { link_skill: '' };
   showSkillForm: boolean[] = [];
-
-
 
   profileKnowledgeData : { link_knowlege: string} = {link_knowlege : ''};
   showKnowledgeForm: boolean[] = [];
 
 
-  // eocData: any;
-  eocData: { name_eoc: EocItem[] } = { name_eoc: [] };
-  groupedData: EocItem[] = [];
-
-  eocID!: number;
 
   occupationalData: any;
   occupationalID!: number;
 
   sectorData: any;
   sectorID!: number;
-
-  no9Data: any;
-  no9ID!: number;
-
 
 
   getusersSkillsData: any;
@@ -74,12 +54,7 @@ export class UnitcodeDetailsComponent implements OnInit{
   getusersKnowledgeID!: number;
   editedKnowledgeIndex: number | null = null;
 
-
   editMode: boolean = false;
-
-  
-
-
   showUpdateForm: boolean[] = [];
   
   editedLink: string = '';
@@ -121,11 +96,7 @@ export class UnitcodeDetailsComponent implements OnInit{
       this.getSectorById(this.sectorID);
     });
 
-
-
-
   }
-
 
 
   getOccupationalById(id: number) {
@@ -151,9 +122,6 @@ export class UnitcodeDetailsComponent implements OnInit{
   }
 
 
-  
-
-
   getUnitCode(id: number) {
     this.careerService.getUnitCode(id).subscribe(
       (data) => {
@@ -164,9 +132,6 @@ export class UnitcodeDetailsComponent implements OnInit{
       }
     );
   }
-
-
-
 
   getUsersSkills(id: number) {
     this.profileService.getUsersSkills(id).subscribe(
@@ -284,15 +249,6 @@ export class UnitcodeDetailsComponent implements OnInit{
       }
     }
   }
-
-///////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-
-
-
 
 
 
@@ -430,10 +386,6 @@ export class UnitcodeDetailsComponent implements OnInit{
 
     return isValidUrl;
   }
-
-
-
-
 
 
 }

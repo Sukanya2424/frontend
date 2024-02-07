@@ -29,11 +29,5 @@ export class KnowledgeUnitcodeService {
 
   
 
-  getUnitcodes(): Observable<any>{
-    return this.http.get(`${this.apiUrl}/getUnitcode`);
-  }
 
-  getKnowleges(): Observable<any>{
-    return this.http.get(`${this.apiUrl}/getKnowlege`);
-  }
 }

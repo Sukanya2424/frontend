@@ -27,12 +27,5 @@ export class CareerLevelService {
     return this.http.delete(`${this.apiUrl}/deleteCareerLevel/${id}`);
   }
 
-
-  getLevels(): Observable<any>{
-    return this.http.get(`${this.apiUrl}/getLevel`);
-  }
-
-  getCareers(): Observable<any>{
-    return this.http.get(`${this.apiUrl}/getCareer`);
-  }
 }
+ 

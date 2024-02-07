@@ -27,11 +27,5 @@ export class OccupationalUnitcodeService {
     return this.http.delete(`${this.apiUrl}/deleteUnitOccupational/${id}`);
   }
 
-  getUnitcodes(): Observable<any>{
-    return this.http.get(`${this.apiUrl}/getUnitcode`);
-  }
 
-  getOccupational(): Observable<any>{
-    return this.http.get(`${this.apiUrl}/getOccupational`);
-  }
 }

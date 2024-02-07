@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CareerLevelService } from '../../service-crud/career-level.service';
+import { CareerService } from '../../service-crud/career.service';
+import { LevelService } from '../../service-crud/level.service';
+
 
 @Component({
   selector: 'app-career-level',
@@ -14,7 +17,12 @@ export class CareerLevelComponent implements OnInit{
   careers: any[] = [];
   levels: any[] = [];
 
-  constructor(private careerLevelsService: CareerLevelService) {}
+  constructor(
+    private careerLevelsService: CareerLevelService,
+    private careerService: CareerService,
+    private levelService: LevelService
+
+    ) {}
 
   ngOnInit() {
     this.loadData();
@@ -28,14 +36,14 @@ export class CareerLevelComponent implements OnInit{
 
   getCareers() {
     // เรียกใช้งาน getCareer() จาก CareerlevelService
-    this.careerLevelsService.getCareers().subscribe((data: any) => {
+    this.careerService.getCareers().subscribe((data: any) => {
       this.careers = data.data;
     });
   }
   
   getLevels() {
     // เรียกใช้งาน getrLevel() จาก CareerlevelService
-    this.careerLevelsService.getLevels().subscribe((data: any) => {
+    this.levelService.getLevels().subscribe((data: any) => {
       this.levels = data.data;
     });
   }

@@ -27,11 +27,5 @@ export class SkillUnitcodeService {
     return this.http.delete(`${this.apiUrl}/deleteUskill/${id}`);
   }
 
-  getUnitcodes(): Observable<any>{
-    return this.http.get(`${this.apiUrl}/getUnitcode`);
-  }
 
-  getSkills(): Observable<any>{
-    return this.http.get(`${this.apiUrl}/getSkill`);
-  }
 }

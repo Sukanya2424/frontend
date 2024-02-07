@@ -12,15 +12,8 @@ export class UnitcodeComponent {
   formunitsData: any = {
     unit_code: '',
     name: '',
-    no_3: '',
-    no_4: '',
-    no_5: '',
-    no_6: '',
-    no_7: '',
-    no_8: '',
-    no_9: '',
-    no_10: '',
-    no_12: ''
+    description_unitcode: '',
+
    };
   editIdunit: number | null = null;
 
@@ -44,15 +37,8 @@ export class UnitcodeComponent {
         this.getUnitcode();
         this.formunitsData.unit_code = '';
         this.formunitsData.name = '';
-        this.formunitsData.no_3 = '';
-        this.formunitsData.no_4 = '';
-        this.formunitsData.no_5 = '';
-        this.formunitsData.no_6 = '';
-        this.formunitsData.no_7 = '';
-        this.formunitsData.no_8 = '';
-        this.formunitsData.no_9 = '';
-        this.formunitsData.no_10 = '';
-        this.formunitsData.no_12 = '';
+        this.formunitsData.description_unitcode = '';
+
       });
     } else {
       // Update an existing career
@@ -61,15 +47,7 @@ export class UnitcodeComponent {
         this.editIdunit = null;
         this.formunitsData.unit_code = '';
         this.formunitsData.name = '';
-        this.formunitsData.no_3 = '';
-        this.formunitsData.no_4 = '';
-        this.formunitsData.no_5 = '';
-        this.formunitsData.no_6 = '';
-        this.formunitsData.no_7 = '';
-        this.formunitsData.no_8 = '';
-        this.formunitsData.no_9 = '';
-        this.formunitsData.no_10 = '';
-        this.formunitsData.no_12 = '';
+        this.formunitsData.description_unitcode = '';
       });
     }
   }
@@ -78,15 +56,7 @@ export class UnitcodeComponent {
     this.editIdunit = unit.id_unit_code;
     this.formunitsData.unit_code = unit.unit_code;
     this.formunitsData.name = unit.name;
-    this.formunitsData.no_3 = unit.no_3;
-    this.formunitsData.no_4 = unit.no_4;
-    this.formunitsData.no_5 = unit.no_5;
-    this.formunitsData.no_6 = unit.no_6;
-    this.formunitsData.no_7 = unit.no_7;
-    this.formunitsData.no_8 = unit.no_8;
-    this.formunitsData.no_9 = unit.no_9;
-    this.formunitsData.no_10 = unit.no_10;
-    this.formunitsData.no_12 = unit.no_12;
+    this.formunitsData.no_3 = unit.description_unitcode;
   }
 
   deleteUnitcode(id: number) {

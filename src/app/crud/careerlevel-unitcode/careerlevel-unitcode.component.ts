@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CareerlevelUnitcodeService } from '../../service-crud/careerlevel-unitcode.service';
+import { CareerLevelService } from '../../service-crud/career-level.service';
+import { UnitcodeService } from '../../service-crud/unitcode.service';
 
 @Component({
   selector: 'app-careerlevel-unitcode',
@@ -15,7 +17,12 @@ export class CareerlevelUnitcodeComponent implements OnInit{
   
   unitcodeOptions: any[] = [];
 
-  constructor(private clandunService: CareerlevelUnitcodeService) {}
+  constructor(
+    private clandunService: CareerlevelUnitcodeService,
+    private careerLevelsService: CareerLevelService,
+    private unitcodeService: UnitcodeService
+
+    ) {}
 
   ngOnInit() {
     this.loadData();
@@ -35,14 +42,14 @@ export class CareerlevelUnitcodeComponent implements OnInit{
   }
 
   getCareerLevelOptions() {
-    this.clandunService.getCareerLevel().subscribe((data: any) => {
+    this.careerLevelsService.getCareerLevel().subscribe((data: any) => {
       this.careerlevelOptions = data.data
     }
     );
   }
 
   getUnitcodesOptions() {
-    this.clandunService.getUnitcodes().subscribe((data: any) => { 
+    this.unitcodeService.getUnitcodes().subscribe((data: any) => { 
       this.unitcodeOptions = data.data
     }
     );

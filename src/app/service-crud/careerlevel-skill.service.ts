@@ -27,12 +27,5 @@ export class CareerlevelSkillService {
     return this.http.delete(`${this.apiUrl}/deleteClSkill/${id}`);
   }
 
-  
-  getCareerLevel(): Observable<any>{
-    return this.http.get(`${this.apiUrl}/getCareerLevel`);
-  }
 
-  getSkills(): Observable<any>{
-    return this.http.get(`${this.apiUrl}/getSkill`);
-  }
 }

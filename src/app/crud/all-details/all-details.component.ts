@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AllDetailsService } from '../../service-crud/all-details.service';
+import { CareerLevelService } from '../../service-crud/career-level.service';
+import { DetailsService } from '../../service-crud/details.service';
 
 @Component({
   selector: 'app-all-details',
@@ -15,7 +17,11 @@ export class AllDetailsComponent implements OnInit{
   careerlevelOptions: any[] = [];
   detailsOptions: any[] = [];
 
-  constructor(private allDetailsService: AllDetailsService) {}
+  constructor(
+    private allDetailsService: AllDetailsService,
+    private careerLevelsService: CareerLevelService,
+    private detailsService: DetailsService
+    ) {}
 
   ngOnInit() {
     this.loadData();
@@ -34,13 +40,13 @@ export class AllDetailsComponent implements OnInit{
   }
 
   getCareerLevelOptions() {
-    this.allDetailsService.getCareerLevel().subscribe((data: any) => {
+    this.careerLevelsService.getCareerLevel().subscribe((data: any) => {
       this.careerlevelOptions = data.data
     });
   }
 
   getDetailsOptions() {
-    this.allDetailsService.getDetails().subscribe((data: any) => {
+    this.detailsService.getDetails().subscribe((data: any) => {
       this.detailsOptions = data.data
     });
   }

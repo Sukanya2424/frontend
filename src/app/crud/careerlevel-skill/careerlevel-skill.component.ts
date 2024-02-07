@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { CareerlevelSkillService } from '../../service-crud/careerlevel-skill.service';
+import { SkillService } from '../../service-crud/skill.service';
+import { CareerLevelService } from '../../service-crud/career-level.service';
 
 @Component({
   selector: 'app-careerlevel-skill',
@@ -16,7 +18,12 @@ export class CareerlevelSkillComponent {
   
   skillsOptions: any[] = [];
 
-  constructor(private clskillsService: CareerlevelSkillService) {}
+  constructor(
+    private clskillsService: CareerlevelSkillService,
+    private skillService: SkillService,
+    private careerLevelsService: CareerLevelService,
+
+    ) {}
 
   ngOnInit() {
     this.loadData();
@@ -36,14 +43,14 @@ export class CareerlevelSkillComponent {
   }
 
   getCareerLevelOptions() {
-    this.clskillsService.getCareerLevel().subscribe((data: any) => {
+    this.careerLevelsService.getCareerLevel().subscribe((data: any) => {
       this.careerlevelOptions = data.data
     }
     );
   }
 
   getSkillsOptions() {
-    this.clskillsService.getSkills().subscribe((data: any) => { 
+    this.skillService.getSkills().subscribe((data: any) => { 
       this.skillsOptions = data.data
     }
     );

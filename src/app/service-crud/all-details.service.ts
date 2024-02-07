@@ -28,11 +28,5 @@ export class AllDetailsService {
     return this.http.delete(`${this.apiUrl}/deleteAlldetails/${id}`);
   }
 
-  getCareerLevel(): Observable<any>{
-    return this.http.get(`${this.apiUrl}/getCareerLevel`);
-  }
 
-  getDetails(): Observable<any>{
-    return this.http.get(`${this.apiUrl}/getDetails`);
-  }
 }

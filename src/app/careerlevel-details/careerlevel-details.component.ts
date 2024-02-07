@@ -63,6 +63,8 @@ export class CareerlevelDetailsComponent implements OnInit{
           const totalCount = totalCountsObject[unit.id_unit_code]?.totalCount || 1;
           unit['percentage'] = (unit.total_count / totalCount) * 100;
         });
+
+
       },
       (error) => {
         console.error('Error fetching data:', error);
@@ -76,12 +78,15 @@ export class CareerlevelDetailsComponent implements OnInit{
     this.careerService.getCareerLevelById(id).subscribe(
       (data) => {
         this.careerLevel = data.data; // Assign the fetched data to the property
+
+
       },
       (error) => {
         console.error('Error fetching career level details:', error);
       }
     );
   }
+
 
 
   showCareerDetail(id: number) {
@@ -92,6 +97,17 @@ export class CareerlevelDetailsComponent implements OnInit{
       console.error('ID is undefined, unable to navigate.');
     }
   }
+
+  calculatePercentage(unit: any): number {
+    if (!unit || !this.totalCounts || !this.totalCounts.unitCodes) {
+      return 0;
+    }
+  
+    const totalCountsObject = this.totalCounts.unitCodes;
+    const totalCount = totalCountsObject[unit.id_unit_code]?.totalCount || 1;
+    return (unit.total_count / totalCount) * 100;
+  }
+  
 
 
 

@@ -1,74 +1,5 @@
 
 
-<!-- <div class="container">
-    <h2>Edit Profile</h2>
-    <div *ngIf="userProfile">
-
-        <img [src]="'http://localhost:3000/uploads/' + userProfile.profileimage" alt="User Profile Image"
-        class="rounded mx-auto d-block mt-4" style="width: 150px; height: 200px;">
-
-        <input type="file" (change)="onFileChange($event)" accept="image/*" class="mt-5">
-        <button (click)="uploadProfileImage()">Upload Image</button>
-    </div>
-    <div *ngIf="userProfile">
-
-
-        <form (ngSubmit)="updateProfile()" #profileForm="ngForm">
-
-            <div class="form-outline">
-                <label  for="id">ID Student:</label>
-                <input type="text" id="id" name="id"  placeholder="{{ userProfile.id }}">
-              </div>
-              
-              <div class="form-outline">
-                <label  for="email">Email:</label>
-                <input type="email" id="email" name="email"  placeholder="{{ userProfile.email }}">
-              </div>
-    
-
-            <div class="form-group">
-                <label for="firstNameTH">First Name (TH)</label>
-                <input type="text" id="firstNameTH" name="firstNameTH" [(ngModel)]="userProfile.firstNameTH" [readonly]="!isEditMode">
-            </div>
-    
-            <div class="form-group">
-                <label for="lastNameTH">Last Name (TH)</label>
-                <input type="text" id="lastNameTH" name="lastNameTH" [(ngModel)]="userProfile.lastNameTH" [readonly]="!isEditMode">
-            </div>
-    
-            <div class="form-group">
-                <label for="firstNameEN">First Name (EN)</label>
-                <input type="text" id="firstNameEN" name="firstNameEN" [(ngModel)]="userProfile.firstNameEN" [readonly]="!isEditMode">
-            </div>
-    
-            <div class="form-group">
-                <label for="lastNameEN">Last Name (EN)</label>
-                <input type="text" id="lastNameEN" name="lastNameEN" [(ngModel)]="userProfile.lastNameEN" [readonly]="!isEditMode">
-            </div>
-    
-            <div class="form-group">
-                <label for="phone">Phone</label>
-                <input type="tel" id="phone" name="phone" [(ngModel)]="userProfile.phone" [readonly]="!isEditMode">
-            </div>
-    
-            <div class="form-group">
-                <label for="line">Line</label>
-                <input type="text" id="line" name="line" [(ngModel)]="userProfile.line" [readonly]="!isEditMode">
-            </div>
-    
-            <div class="form-group">
-                <label for="address">Address</label>
-                <textarea id="address" name="address" [(ngModel)]="userProfile.address" [readonly]="!isEditMode"></textarea>
-            </div>
-    
-            <button *ngIf="!isEditMode" (click)="toggleEditMode()">Edit</button>
-            <button (click)="updateProfile()" [disabled]="!isEditMode">Update Profile</button>
-        </form>
-    </div>
-
-</div> -->
-
-
 <app-navbar></app-navbar>
 
 <div class="container mt-5">
@@ -103,56 +34,58 @@
                             <div class="row gutters">
                                 <div class="col-md-6">
                                     <div class="form-outline mb-3">
-                                        <label  for="id" class="mb-3">ID Student :</label>
-                                        <input class="form-control" type="text" id="id" name="id"  placeholder="{{ userProfile.id }}">
+                                        <label  for="id" class="mb-3"><B>ID Student :</B></label>
+                                        <!-- <input class="form-control" type="text" id="id" name="id"  placeholder="{{ userProfile.id }}"> -->
+                                        <p>{{ userProfile.id }}</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-outline mb-3">
-                                        <label  for="email" class="mb-3">Email :</label>
-                                        <input class="form-control" type="email" id="email" name="email"  placeholder="{{ userProfile.email }}">
+                                        <label  for="email" class="mb-3"><B>Email :</B></label>
+                                        <!-- <input class="form-control" type="email" id="email" name="email"  placeholder="{{ userProfile.email }}"> -->
+                                        <p>{{ userProfile.email }}</p>
                                     </div>
                                 </div>
                         
                                 <div class="col-md-6">
                                     <div class="form-outline mb-3">
-                                        <label for="firstNameTH" class="mb-3">First Name (TH) :</label>
+                                        <label for="firstNameTH" class="mb-3"><B>First Name (TH) :</B></label>
                                         <input class="form-control" type="text" id="firstNameTH" name="firstNameTH" [(ngModel)]="userProfile.firstNameTH" [readonly]="!isEditMode">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-outline mb-3">
-                                        <label for="lastNameTH" class="mb-3">Last Name (TH) :</label>
+                                        <label for="lastNameTH" class="mb-3"><B>Last Name (TH) :</B></label>
                                         <input class="form-control" type="text" id="lastNameTH" name="lastNameTH" [(ngModel)]="userProfile.lastNameTH" [readonly]="!isEditMode">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-outline mb-3">
-                                        <label for="firstNameEN" class="mb-3">First Name (EN) :</label>
+                                        <label for="firstNameEN" class="mb-3"><B>First Name (EN) :</B></label>
                                         <input class="form-control" type="text" id="firstNameEN" name="firstNameEN" [(ngModel)]="userProfile.firstNameEN" [readonly]="!isEditMode">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-outline mb-3">
-                                        <label for="lastNameEN" class="mb-3">Last Name (EN) :</label>
+                                        <label for="lastNameEN" class="mb-3"><B>Last Name (EN) :</B></label>
                                         <input class="form-control" type="text" id="lastNameEN" name="lastNameEN" [(ngModel)]="userProfile.lastNameEN" [readonly]="!isEditMode">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-outline mb-3">
-                                        <label for="phone" class="mb-3">Phone :</label>
+                                        <label for="phone" class="mb-3"><B>Phone :</B></label>
                                         <input class="form-control" type="tel" id="phone" name="phone" [(ngModel)]="userProfile.phone" [readonly]="!isEditMode">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-outline mb-3">
-                                        <label for="line" class="mb-3">Line :</label>
+                                        <label for="line" class="mb-3"><B>Line :</B></label>
                                         <input class="form-control" type="text" id="line" name="line" [(ngModel)]="userProfile.line" [readonly]="!isEditMode">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-outline mb-3">
-                                        <label for="address" class="mb-3">Address :</label>
+                                        <label for="address" class="mb-3"><B>Address :</B></label>
                                         <textarea class="form-control" id="address" name="address" [(ngModel)]="userProfile.address" [readonly]="!isEditMode"></textarea>
                                     </div>
                                 </div>

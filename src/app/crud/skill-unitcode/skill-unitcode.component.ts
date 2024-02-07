@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { SkillUnitcodeService } from '../../service-crud/skill-unitcode.service';
+import { SkillService } from '../../service-crud/skill.service';
+import { UnitcodeService } from '../../service-crud/unitcode.service';
 
 @Component({
   selector: 'app-skill-unitcode',
@@ -16,7 +18,10 @@ export class SkillUnitcodeComponent {
 
   skillOptions: any[] = [];
   
-  constructor(private uskillService: SkillUnitcodeService) {}
+  constructor(private uskillService: SkillUnitcodeService,
+    private skillService: SkillService,
+    private unitcodeService: UnitcodeService
+    ) {}
 
   ngOnInit() {
     this.loadData();
@@ -24,7 +29,7 @@ export class SkillUnitcodeComponent {
 
   loadData() {
     this.getUskills();
-    this.getKnowlegesOptions();
+    this.getSkillsOptions();
     this.getUnitcodesOptions();
   }
 
@@ -36,8 +41,8 @@ export class SkillUnitcodeComponent {
     );
   }
 
-  getKnowlegesOptions() {
-    this.uskillService.getSkills().subscribe(
+  getSkillsOptions() {
+    this.skillService.getSkills().subscribe(
       (data: any) => {
         this.skillOptions = data.data
       }
@@ -45,9 +50,9 @@ export class SkillUnitcodeComponent {
   }
 
   getUnitcodesOptions() {
-    this.uskillService.getUnitcodes().subscribe(
+    this.unitcodeService.getUnitcodes().subscribe(
       (data: any) => {
-        this.unitcodeOptions = data.data
+        this.unitcodeService = data.data
       }
     );
   }

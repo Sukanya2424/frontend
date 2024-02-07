@@ -27,12 +27,6 @@ export class CareerlevelUnitcodeService {
     return this.http.delete(`${this.apiUrl}/deleteClAndUn/${id}`);
   }
 
-  getCareerLevel(): Observable<any>{
-    return this.http.get(`${this.apiUrl}/getCareerLevel`);
-  }
 
-  getUnitcodes(): Observable<any>{
-    return this.http.get(`${this.apiUrl}/getUnitcode`);
-  }
 
 }

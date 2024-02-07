@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { SectorUnitcodeService } from '../../service-crud/sector-unitcode.service';
+import { SectorService } from '../../service-crud/sector.service';
+import { UnitcodeService } from '../../service-crud/unitcode.service';
 
 @Component({
   selector: 'app-sector-unitcode',
@@ -16,7 +18,11 @@ export class SectorUnitcodeComponent {
 
   sectorOptions: any[] = [];
   
-  constructor(private usectorService: SectorUnitcodeService) {}
+  constructor(
+    private usectorService: SectorUnitcodeService,
+    private sectorService: SectorService,
+    private unitcodeService: UnitcodeService
+    ) {}
 
   ngOnInit() {
     this.loadData();
@@ -37,7 +43,7 @@ export class SectorUnitcodeComponent {
   }
 
   getSectorOptions() {
-    this.usectorService.getSector().subscribe(
+    this.sectorService.getSector().subscribe(
       (data: any) => {
         this.sectorOptions = data.data
       }
@@ -45,7 +51,7 @@ export class SectorUnitcodeComponent {
   }
 
   getUnitcodesOptions() {
-    this.usectorService.getUnitcodes().subscribe(
+    this.unitcodeService.getUnitcodes().subscribe(
       (data: any) => {
         this.unitcodeOptions = data.data
       }

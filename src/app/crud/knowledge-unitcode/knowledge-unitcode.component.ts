@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { KnowledgeUnitcodeService } from '../../service-crud/knowledge-unitcode.service';
+import { KnowledgeService } from '../../service-crud/knowledge.service';
+import { UnitcodeService } from '../../service-crud/unitcode.service';
 
 @Component({
   selector: 'app-knowledge-unitcode',
@@ -16,7 +18,11 @@ export class KnowledgeUnitcodeComponent {
 
   knowlegeOptions: any[] = [];
   
-  constructor(private uknowlegeService: KnowledgeUnitcodeService) {}
+  constructor(
+    private uknowlegeService: KnowledgeUnitcodeService,
+    private knowlegeService: KnowledgeService,
+    private unitcodeService: UnitcodeService
+    ) {}
   
 
   ngOnInit() {
@@ -38,7 +44,7 @@ export class KnowledgeUnitcodeComponent {
   }
 
   getKnowlegesOptions() {
-    this.uknowlegeService.getKnowleges().subscribe(
+    this.knowlegeService.getKnowleges().subscribe(
       (data: any) => {
         this.knowlegeOptions = data.data
       }
@@ -46,7 +52,7 @@ export class KnowledgeUnitcodeComponent {
   }
 
   getUnitcodesOptions() {
-    this.uknowlegeService.getUnitcodes().subscribe(
+    this.unitcodeService.getUnitcodes().subscribe(
       (data: any) => {
         this.unitcodeOptions = data.data
       }

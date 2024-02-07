@@ -27,11 +27,5 @@ export class SectorUnitcodeService {
     return this.http.delete(`${this.apiUrl}/deleteUnitSector/${id}`);
   }
 
-  getUnitcodes(): Observable<any>{
-    return this.http.get(`${this.apiUrl}/getUnitcode`);
-  }
 
-  getSector(): Observable<any>{
-    return this.http.get(`${this.apiUrl}/getSector`);
-  }
 }

@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { OccupationalUnitcodeService } from '../../service-crud/occupational-unitcode.service';
+import { UnitcodeService } from '../../service-crud/unitcode.service';
+import { OccupationalService } from '../../service-crud/occupational.service';
 
 @Component({
   selector: 'app-occupational-unitcode',
@@ -15,7 +17,12 @@ export class OccupationalUnitcodeComponent {
   unitcodeOptions: any[] = [];
   occupationalOptions: any[] = [];
   
-  constructor(private uoccupationalService: OccupationalUnitcodeService) {}
+  constructor(
+    private uoccupationalService: OccupationalUnitcodeService,
+    private unitcodeService: UnitcodeService,
+    private occupationalService: OccupationalService
+
+    ) {}
 
   ngOnInit() {
     this.loadData();
@@ -36,7 +43,7 @@ export class OccupationalUnitcodeComponent {
   }
 
   getOccupationalOptions() {
-    this.uoccupationalService.getOccupational().subscribe(
+    this.occupationalService.getOccupational().subscribe(
       (data: any) => { 
         this.occupationalOptions = data.data
       }
@@ -44,7 +51,7 @@ export class OccupationalUnitcodeComponent {
   }
 
   getUnitcodesOptions() {
-    this.uoccupationalService.getUnitcodes().subscribe(
+    this.unitcodeService.getUnitcodes().subscribe(
       (data: any) => {
         this.unitcodeOptions = data.data
       }

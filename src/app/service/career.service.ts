@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class CareerService {
 
-  private apiUrl = 'http://localhost:3000'; // Replace with your API URL
+  private apiUrl = 'https://proud-underclothes-elk.cyclic.app'; // Replace with your API URL
 
   constructor(private http: HttpClient) {}
 

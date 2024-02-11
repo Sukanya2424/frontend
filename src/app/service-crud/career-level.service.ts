@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CareerLevelService {
 
-  private apiUrl = 'https://proud-underclothes-elk.cyclic.app'; // Replace with your backend URL
+  private apiUrl = 'https://dark-lime-caiman-boot.cyclic.app'; // Replace with your backend URL
 
   constructor(private http: HttpClient) {}
 

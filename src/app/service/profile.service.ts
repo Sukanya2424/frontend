@@ -7,7 +7,7 @@ import { Observable, catchError, map ,of} from 'rxjs';
 })
 export class ProfileService {
 
-  private baseUrl = 'https://proud-underclothes-elk.cyclic.app'; // Replace with your backend API URL
+  private baseUrl = 'https://dark-lime-caiman-boot.cyclic.app'; // Replace with your backend API URL
 
   constructor(private http: HttpClient) { }
 

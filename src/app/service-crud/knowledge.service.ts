@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class KnowledgeService {
 
-  private apiUrl = 'http://localhost:3000'; // Replace with your backend URL
+  private apiUrl = 'https://proud-underclothes-elk.cyclic.app'; // Replace with your backend URL
 
   constructor(private http: HttpClient) {}
 

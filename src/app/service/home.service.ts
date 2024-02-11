@@ -8,7 +8,7 @@ import { Observable, catchError, tap } from 'rxjs';
 })
 export class HomeService {
 
-  private baseUrl = 'https://dark-lime-caiman-boot.cyclic.app'; // Replace with your backend API URL
+  private baseUrl = 'https://cute-puce-cocoon-cap.cyclic.app'; // Replace with your backend API URL
 
   private isAuthenticated: boolean = false;
 

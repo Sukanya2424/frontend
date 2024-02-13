@@ -52,35 +52,31 @@ p {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: white;
+  color: rgb(0, 0, 0);
   width: 90%;
+  
 }
 
 
-.overlay-text p {
-  font-size: 18px; /* ขนาดตั้งต้นของตัวอักษร */
+.overlay-text p,a {
+  // font-size: 40px; /* ขนาดตั้งต้นของตัวอักษร */
   margin: 0;
   font-family: 'Prompt', sans-serif;
+  text-shadow: 0px 5px 5px rgb(255, 255, 255); /* เพิ่มเงาด้านล่าง */
+  font-size: 40px;
+  margin-top: 110px;
 }
 
 @media only screen and (max-width: 768px) {
   /* For smaller screens like phones */
-  .overlay-text p {
-    font-size: 18px; /* ลดขนาดตัวอักษรสำหรับหน้าจอเล็กลง */
+  .overlay-text p,a {
+    font-size: 20px; /* ลดขนาดตัวอักษรสำหรับหน้าจอเล็กลง */
+    margin-top: 60px;
   
   }
-  .overlay-text h1 {
-    font-size: 18px; /* ลดขนาดตัวอักษรสำหรับหน้าจอเล็กลง */
-  
-  }
+
 }
 
-.overlay-text h1 {
-  font-size: 50px;
-  font-family: 'Prompt', sans-serif;
-  line-height: 1.5; /* Adjust the line height */
-  color: rgba(189, 189, 189, 0.555); /* Set text color */
-}
 
 .custom-container {
   display: flex;
@@ -102,6 +98,15 @@ a {
 
 }
 
+
+.dynamic-color {
+  transition: color 0.3s ease; /* เพิ่มการเปลี่ยนสีเมื่อ hover */
+}
+
+.dynamic-color:hover {
+  color: #000000; /* เปลี่ยนเป็นสีดำเมื่อ hover */
+  font-weight: bold; /* เพิ่มความหนา */
+}
 
 
 

@@ -161,3 +161,11 @@ height: 100%;
 
 
 
+.dynamic-color {
+  transition: color 0.3s ease; /* เพิ่มการเปลี่ยนสีเมื่อ hover */
+}
+
+.dynamic-color:hover {
+  color: #000000; /* เปลี่ยนเป็นสีดำเมื่อ hover */
+  font-weight: bold; /* เพิ่มความหนา */
+}

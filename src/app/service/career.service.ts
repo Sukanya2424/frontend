@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class CareerService {
 
-  private apiUrl = 'https://cute-puce-cocoon-cap.cyclic.app'; // Replace with your API URL
+  private apiUrl = 'https://tpqi-backend.cyclic.app'; // Replace with your API URL
 
   constructor(private http: HttpClient) {}
 

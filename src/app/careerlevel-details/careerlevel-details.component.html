@@ -2,12 +2,20 @@
 
 <div class="image-container">
   <div>
-    <img src="assets/career_1.png" class="img-fluid less-bright" alt="Sample image">
+    <img src="assets/career.png" class="img-fluid less-bright" alt="Sample image">
+
     <div class="overlay-text">
-      <h1>คุณวุฒิวิชาชีพ</h1>
-    </div>
-    <div class="overlay-text">
-      <p>คุณวุฒิวิชาชีพ</p>
+      <p>
+        <a  style="color: #aa1906; " >คุ</a>
+        <a  style="color: #B41500; " >ณ</a>
+        <a  style="color: #F01D00; " >วุ</a>
+        <a  style="color: #FF3419; " >ฒิ</a>
+        <a  style="color: #FF4F37; " >วิ</a>
+        <a  style="color: #FF6955; " >ช</a>
+        <a  style="color: #FF8473; " >า</a>
+        <a  style="color: #FF9E91;" >ชี</a>
+        <a  style="color: #FFB0A5;" >พ</a>
+      </p>
     </div>
   </div>
 </div>
@@ -43,7 +51,7 @@
                     <div style="display: flex; align-items: center;">
                       <p style="font-size: 16px; margin-right: 5px;">{{ chartUnitcodes[index]?.percentage ? chartUnitcodes[index]?.percentage.toFixed() + '%' : '0%' }}</p>
                       <p-progressBar [value]="chartUnitcodes[index]?.percentage || 0" [showValue]="false" [style]="{ 'height': '8px', 'width': '40px', 'margin-right': '5px' }"></p-progressBar>
-                      <p style="font-size: 12px;">{{ careerLevel.unit_code[index] }} - {{ careerLevel.name[index] }}</p>
+                      <p class="font-size-16 dynamic-color">{{ careerLevel.unit_code[index] }} - {{ careerLevel.name[index] }}</p>
                     </div>
                   </div>
                 </div>
@@ -67,7 +75,7 @@
     © 2023 Department of Electrical and Computer Engineering Faculty of Engineering Naresuan University
   </div>
   <div class="custom-text">
-    reference <a href="https://tpqi-net.tpqi.go.th/home/occ/industrialInfo/ICT" target="_blank">สถาบันคุณวุฒิวิชาชีพ (องค์การมหาชน)</a>
+    reference <a href="https://tpqi-net.tpqi.go.th/home/occ/industrialInfo/ICT" target="_blank" style="font-size: 14px; color:rgb(255, 255, 255);">สถาบันคุณวุฒิวิชาชีพ (องค์การมหาชน)</a>
   </div>
 </div>
 

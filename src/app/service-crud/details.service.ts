@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DetailsService {
 
-  private apiUrl = 'https://cute-puce-cocoon-cap.cyclic.app'; // Replace with your backend URL
+  private apiUrl = 'https://tpqi-backend.cyclic.app'; // Replace with your backend URL
 
   constructor(private http: HttpClient) {}
 

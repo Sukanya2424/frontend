@@ -63,7 +63,7 @@
     <div *ngFor="let careerLevel of careerLevels; let i = index" class="circle-container">
       <div class="index-circle">{{ careerLevel.id_career_level }}</div>
         <div class="career-info" (click)="showCareerDetail(careerLevel.id_career_level)">
-            <p>{{ careerLevel.name_career }} {{ careerLevel.name_level }}</p>
+            <p class="font-size-16 dynamic-color" >{{ careerLevel.name_career }} {{ careerLevel.name_level }}</p>
         </div>
       </div>
   </div>

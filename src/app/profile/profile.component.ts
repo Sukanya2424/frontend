@@ -144,12 +144,12 @@ export class ProfileComponent implements OnInit{
                 career: userSkills.careerLevels[careerLevelId].career,
                 level: userSkills.careerLevels[careerLevelId].level,
                 chartData: {
-                    labels: [`${percentage}% User Skills`, `${100 - percentage}% Total Skills`],
+                    labels: [`${percentage}% With Evidence`, `${100 - percentage}% Without Evidence`],
                     datasets: [
                         {
                             data: [percentage, 100 - percentage],
-                            backgroundColor: ["#FF6384", "#36A2EB"],
-                            hoverBackgroundColor: ["#FF6384", "#36A2EB"],
+                            backgroundColor: ["#33FF00", "#FF0099"],
+                            hoverBackgroundColor: ["#33FF00", "#FF0099"],
                         }
                     ]
                 }
@@ -173,12 +173,12 @@ export class ProfileComponent implements OnInit{
           career: userKnowledge.careerLevels[careerLevelId].career,
           level: userKnowledge.careerLevels[careerLevelId].level,
           chartData: {
-            labels: [`${percentage}% User Knowledge`, `${100 - percentage}% Total Knowledge`],
+            labels: [`${percentage}% With Evidence`, `${100 - percentage}% Without Evidence`],
             datasets: [
               {
                 data: [percentage, 100 - percentage],
-                backgroundColor: ["#4BC0C0", "#FFCE56"],
-                hoverBackgroundColor: ["#4BC0C0", "#FFCE56"]
+                backgroundColor: ["#33FF00", "#FF0099"],
+                hoverBackgroundColor: ["#33FF00", "#FF0099"],
               }
             ]
           }

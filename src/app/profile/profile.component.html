@@ -20,7 +20,7 @@
             <div class="card-body text-center">
 
               <div *ngIf="userProfile">
-                <img [src]="'https://cute-puce-cocoon-cap.cyclic.app/uploads/' + userProfile.profileimage" alt="User Profile Image"
+                <img [src]="'https://tpqi-backend.cyclic.app/uploads/' + userProfile.profileimage" alt="User Profile Image"
                 class="rounded mx-auto d-block mt-2" style="width: 150px; height: 200px;">
               </div>
             </div>
@@ -104,12 +104,14 @@
                     
                     <div class="row">
                       <div class="col-md-4">
+                        <p class="text-center">Skill</p>
                         <div *ngIf="chart.skillsChartData">
                           <p-chart type="pie" [data]="chart.skillsChartData"  
                           [options]="chart.skillsChartData" ></p-chart>
                         </div>
                       </div>
                       <div class="col-md-4">
+                        <p class="text-center">Knoeledge</p>
                         <div *ngIf="chart.knowledgeChartData">
                           <p-chart type="pie" [data]="chart.knowledgeChartData"></p-chart>
                         </div>

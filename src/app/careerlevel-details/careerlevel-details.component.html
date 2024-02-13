@@ -35,30 +35,23 @@
             <h3>หน่วยสมรรถนะ (หน่วยสมรรถนะทั้งหมดของคุณวุฒิวิชาชีพนี้)</h3>
     
 
+
             <div *ngIf="careerLevel" class="certification-text">
               <div *ngFor="let i of careerLevel.unit_code; let index = index" class="row">
-                <div class="col-2">
+                <div class="col-12">
                   <div class="career-info" (click)="showCareerDetail(careerLevel.id_unit_code[index])">
                     <div style="display: flex; align-items: center;">
-                      <p style="font-size: 14px; margin-right: 5px;">{{ chartUnitcodes[index]?.percentage ? chartUnitcodes[index]?.percentage.toFixed() + '%' : '0%' }}</p>
-                      <p-progressBar [value]="chartUnitcodes[index]?.percentage || 0" [showValue]="false"
-                        [style]="{ 'height': '12px', 'width': '50px', 'margin-right': '5px' }"></p-progressBar>
+                      <p style="font-size: 16px; margin-right: 5px;">{{ chartUnitcodes[index]?.percentage ? chartUnitcodes[index]?.percentage.toFixed() + '%' : '0%' }}</p>
+                      <p-progressBar [value]="chartUnitcodes[index]?.percentage || 0" [showValue]="false" [style]="{ 'height': '8px', 'width': '40px', 'margin-right': '5px' }"></p-progressBar>
+                      <p style="font-size: 12px;">{{ careerLevel.unit_code[index] }} - {{ careerLevel.name[index] }}</p>
                     </div>
                   </div>
                 </div>
-                
-                
-                <div class="col-10" (click)="showCareerDetail(careerLevel.id_unit_code[index])">
-                  <p> {{ careerLevel.unit_code[index] }} - {{ careerLevel.name[index] }}</p>
-                </div>
               </div>
             </div>
-
+            
             
           
-            
-          
-
 
           </div>
         </div>

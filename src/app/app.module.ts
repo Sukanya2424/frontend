@@ -55,6 +55,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ReferenceComponent } from './reference/reference.component';
 import { ProgressBarModule } from 'primeng/progressbar';
 import { ResetPasswordComponent } from './homepage/reset-password/reset-password.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 
@@ -118,7 +119,9 @@ import { ResetPasswordComponent } from './homepage/reset-password/reset-password
     MatSnackBarModule,
     MatInputModule,
     ChartModule,
-    ProgressBarModule
+    ProgressBarModule,
+    FlexLayoutModule,
+    
     
   ],
   bootstrap: [AppComponent]

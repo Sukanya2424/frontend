@@ -27,6 +27,9 @@ export class NavbarComponent {
     return this.homeService.isLoggedIn(); // Adjust this based on your authentication logic
   }
 
+
+  
+
   
 
 }

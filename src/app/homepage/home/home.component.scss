@@ -8,6 +8,7 @@
   margin-bottom: 10px; /* Adjust margin as needed */
 }
 
+
 .index-circle {
   display: flex;
   justify-content: center;
@@ -22,6 +23,15 @@
   font-size: 16px; /* Increase font size */
   font-family: 'Prompt', sans-serif; /* Change font family */
 }
+
+@media (max-width: 412px) {
+  .index-circle {
+    width: 50px; /* ปรับขนาดวงกลมเมื่อหน้าจอมีขนาดเล็กลง */
+    height: 20px; /* ปรับขนาดวงกลมเมื่อหน้าจอมีขนาดเล็กลง */
+    font-size: 14px; /* ปรับขนาดตัวอักษรเมื่อหน้าจอมีขนาดเล็กลง */
+  }
+}
+
 
 .career-info {
   display: flex;
@@ -43,51 +53,38 @@
 
 .image-container {
   position: relative;
-  display: inline-block; /* Ensure the container wraps around the image */
+  width: 100%;
 }
 
-.overlay-text-tpqi {
-  display: flex;
-  align-items: center;
-  position: absolute;
-  top: 45%; /* Adjust the top position as needed */
-  left: 50%; /* Adjust the left position as needed */
-  transform: translate(-50%, -50%); /* Center the text */
-  color: white; /* Set text color */
-  text-align: center;
-  font-size: 24px; /* Adjust the font size as needed */
-  font-weight: bold; /* Optionally set font weight */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optionally add text shadow for better visibility */
-  font-family: 'Prompt', sans-serif; /* Change font family */
-}
 
 .overlay-text {
-  display: flex;
-  align-items: center;
   position: absolute;
-  top: 50%; /* Adjust the top position as needed */
-  left: 50%; /* Adjust the left position as needed */
-  transform: translate(-50%, -50%); /* Center the text */
-  color: white; /* Set text color */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-  font-size: 24px; /* Adjust the font size as needed */
-  font-weight: bold; /* Optionally set font weight */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optionally add text shadow for better visibility */
-  font-family: 'Prompt', sans-serif; /* Change font family */
+  color: white;
+  width: 90%;
 }
 
-.overlay-text-tpqi h1 {
-  font-size: 28px;
-  font-family: 'Georgia', sans-serif;
-  line-height: 1.5; /* Adjust the line height */
-}
 
-.overlay-text h2 {
-  width: auto;
-  font-size: 22px;
+.overlay-text p {
+  font-size: 20px; /* ขนาดตั้งต้นของตัวอักษร */
+  margin: 0;
   font-family: 'Prompt', sans-serif;
-  line-height: 1.5; /* Adjust the line height */
 }
+
+@media only screen and (max-width: 768px) {
+  /* For smaller screens like phones */
+  .overlay-text p {
+    font-size: 30px; /* ลดขนาดตัวอักษรสำหรับหน้าจอเล็กลง */
+  
+  }
+}
+
+
+
+
 
 .custom-label {
   font-size: 18px;
@@ -123,10 +120,14 @@ background: #eee;
 .h-custom {
 height: calc(100% - 73px);
 }
+
+
+
 @media (max-width: 450px) {
 .h-custom {
 height: 100%;
 }
+
 }
 
 

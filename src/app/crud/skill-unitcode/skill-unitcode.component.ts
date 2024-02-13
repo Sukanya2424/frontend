@@ -52,7 +52,7 @@ export class SkillUnitcodeComponent {
   getUnitcodesOptions() {
     this.unitcodeService.getUnitcodes().subscribe(
       (data: any) => {
-        this.unitcodeService = data.data
+        this.unitcodeOptions = data.data
       }
     );
   }
